@@ -12,7 +12,7 @@ Built over three canonical sequence modeling papers on arXiv, this system demons
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 - [The Engineering Problem](#-the-engineering-problem)
 - [System Architecture](#-system-architecture)
 - [Key Engineering Insights](#-key-engineering-insights)
@@ -28,7 +28,7 @@ Built over three canonical sequence modeling papers on arXiv, this system demons
 
 ---
 
-## 🎯 The Engineering Problem
+##  The Engineering Problem
 
 Most RAG tutorials demonstrate a "happy path" demo: one user querying a local vector store. Under production conditions or incident bursts, naive RAG pipelines collapse:
 
@@ -40,7 +40,7 @@ Most RAG tutorials demonstrate a "happy path" demo: one user querying a local ve
 
 ---
 
-## 🏗 System Architecture
+##  System Architecture
 
 The pipeline consists of a four-step execution flow with pre-generation branching and post-generation self-correction loops:
 
@@ -67,7 +67,7 @@ flowchart TD
 
 ---
 
-## 💡 Key Engineering Insights
+##  Key Engineering Insights
 
 1. **TPM Binds First:** While Groq advertises 30 RPM, the 8,000 TPM limit binds immediately. With an average request consuming 1,837 input and 192 output tokens (2,029 total), maximum theoretical capacity is **~3.9 requests per minute**.
 2. **Model Latency Dominates Retrieval:** Optimizing vector retrieval from 66 ms to 20 ms saves only 46 ms. In contrast, provider-side pre-first-token latency (attention prefill, queueing, and model reasoning) averages **5,217 ms**. Retrieval tuning alone cannot solve a 5-second latency problem.
@@ -76,7 +76,7 @@ flowchart TD
 
 ---
 
-## 📊 Benchmark Results
+##  Benchmark Results
 
 All metrics are recomputed directly from the 207-row raw dataset [`results.csv`](results.csv) using NumPy linear interpolation via [`make_tables.py`](make_tables.py).
 
@@ -139,7 +139,7 @@ All metrics are recomputed directly from the 207-row raw dataset [`results.csv`]
 
 ---
 
-## 💻 Interactive Usage (`ask.py`)
+##  Interactive Usage (`ask.py`)
 
 You can query the RAG assistant interactively in real time.
 
@@ -192,7 +192,7 @@ It does not contain information regarding LLaMA or GPT-4.
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 The-Relay-RAG/
@@ -236,7 +236,7 @@ The-Relay-RAG/
 
 ---
 
-## 🚀 Reproduction Guide
+##  Reproduction Guide
 
 ### 1. Environment Setup
 ```powershell
@@ -274,7 +274,7 @@ python export_submission.py
 
 ---
 
-## 📚 Research Papers Grounding
+##  Research Papers Grounding
 
 The assistant is strictly grounded on three pinned arXiv papers:
 
@@ -288,5 +288,5 @@ All extraction boundaries, paragraph splits, and chunk mappings are cryptographi
 
 ---
 
-## 📄 License
+##  License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
