@@ -1,0 +1,191 @@
+{
+  "experiment": "retrieval_comparison_v1",
+  "frozen_status": "approved",
+  "timestamp": "2026-11-10T11:30:00Z",
+  "corpus_chunks": 191,
+  "model_spec": {
+    "name": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384,
+    "normalization": "L2_unit_sphere",
+    "similarity_metric": "cosine_similarity_dot_product",
+    "index_build_time_ms": 33098.3,
+    "latency_p50_ms": 11.83,
+    "latency_p95_ms": 20.15
+  },
+  "metric_spec": {
+    "total_questions": 15,
+    "factual_questions_denominator": 12,
+    "refusal_trap_questions": 3,
+    "bm25_recall_at_5": "11/12 (91.7%)",
+    "dense_recall_at_5": "12/12 (100.0%)",
+    "hybrid_recall_at_5": "11/12 (91.7%)",
+    "critical_differentiating_query": "q06 (dynamic chunking complexity bottleneck)"
+  },
+  "question_audit_log": [
+    {
+      "id": "q01",
+      "type": "factual",
+      "question": "What are the dimensions dk and dv used for each head in the Transformer multi-head attention mechanism?",
+      "target_paper": "attention",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.7461,
+      "winner": "tie"
+    },
+    {
+      "id": "q02",
+      "type": "factual",
+      "question": "Why do the authors suspect that additive attention outperforms dot-product attention without scaling for large values of dk?",
+      "target_paper": "attention",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8603,
+      "winner": "tie"
+    },
+    {
+      "id": "q03",
+      "type": "factual",
+      "question": "What BLEU score did the Transformer establish on the WMT 2014 English-to-German and English-to-French benchmarks?",
+      "target_paper": "attention",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8053,
+      "winner": "tie"
+    },
+    {
+      "id": "q04",
+      "type": "factual",
+      "question": "How are positional encodings computed in the Transformer using sine and cosine functions?",
+      "target_paper": "attention",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8094,
+      "winner": "tie"
+    },
+    {
+      "id": "q05",
+      "type": "factual",
+      "question": "How does Dynamic Chunking determine sequence segment boundaries compared to uniform fixed chunking?",
+      "target_paper": "dynamic_chunking",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.87,
+      "winner": "tie"
+    },
+    {
+      "id": "q06",
+      "type": "factual",
+      "question": "What computational complexity bottleneck in long-context Transformers does Dynamic Chunking address?",
+      "target_paper": "dynamic_chunking",
+      "bm25_rank": 9,
+      "dense_rank": 1,
+      "hybrid_rank": 7,
+      "dense_top_score": 0.8142,
+      "winner": "dense"
+    },
+    {
+      "id": "q07",
+      "type": "factual",
+      "question": "What mechanism or boundary predictor is trained in Dynamic Chunking to segment tokens?",
+      "target_paper": "dynamic_chunking",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.9017,
+      "winner": "tie"
+    },
+    {
+      "id": "q08",
+      "type": "factual",
+      "question": "What throughput or sequence speedup does Dynamic Chunking demonstrate over standard dense transformers?",
+      "target_paper": "dynamic_chunking",
+      "bm25_rank": 2,
+      "dense_rank": 2,
+      "hybrid_rank": 2,
+      "dense_top_score": 0.829,
+      "winner": "tie"
+    },
+    {
+      "id": "q09",
+      "type": "factual",
+      "question": "What is Mimi in the Moshi architecture and at what frame rate does its neural audio codec operate?",
+      "target_paper": "moshi",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8017,
+      "winner": "tie"
+    },
+    {
+      "id": "q10",
+      "type": "factual",
+      "question": "How does Moshi model conversational dialogue between the user and the agent simultaneously?",
+      "target_paper": "moshi",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8645,
+      "winner": "tie"
+    },
+    {
+      "id": "q11",
+      "type": "factual",
+      "question": "What is the theoretical and observed latency of the Moshi speech-text model during dialogue?",
+      "target_paper": "moshi",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.9227,
+      "winner": "tie"
+    },
+    {
+      "id": "q12",
+      "type": "factual",
+      "question": "How does Moshi combine text tokens with acoustic audio tokens in its language model?",
+      "target_paper": "moshi",
+      "bm25_rank": 1,
+      "dense_rank": 1,
+      "hybrid_rank": 1,
+      "dense_top_score": 0.8746,
+      "winner": "tie"
+    },
+    {
+      "id": "q13",
+      "type": "refusal_trap",
+      "question": "What is the training batch size and learning rate used to train the LLaMA-3 foundation model?",
+      "bm25_rank": null,
+      "dense_rank": null,
+      "hybrid_rank": null,
+      "dense_top_score": 0.7729,
+      "nearest_neighbor_paper": "moshi",
+      "nearest_neighbor_section": "3.2.2 Pre-training data filtering"
+    },
+    {
+      "id": "q14",
+      "type": "refusal_trap",
+      "question": "What is the BLEU score of the Moshi dialogue model on the WMT 2014 English-to-German translation task?",
+      "bm25_rank": null,
+      "dense_rank": null,
+      "hybrid_rank": null,
+      "dense_top_score": 0.8174,
+      "nearest_neighbor_paper": "attention",
+      "nearest_neighbor_section": "6.1 Machine Translation"
+    },
+    {
+      "id": "q15",
+      "type": "refusal_trap",
+      "question": "How does Dynamic Chunking optimize relational database SQL indexing and B-tree storage?",
+      "bm25_rank": null,
+      "dense_rank": null,
+      "hybrid_rank": null,
+      "dense_top_score": 0.7761,
+      "nearest_neighbor_paper": "dynamic_chunking",
+      "nearest_neighbor_section": "A.1.3 External Chunking"
+    }
+  ]
+}

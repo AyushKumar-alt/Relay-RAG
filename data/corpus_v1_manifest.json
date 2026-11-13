@@ -1,0 +1,31 @@
+{
+  "corpus_version": "corpus_v1",
+  "status": "frozen",
+  "frozen_timestamp": "2026-11-10T11:07:00Z",
+  "papers": 3,
+  "pdf_pages": 120,
+  "sections": 94,
+  "paragraphs": 632,
+  "chunks": 191,
+  "manual_quality_audit": "passed_with_minor_issues",
+  "known_issues": [
+    "occasional_hyphenation_artifacts",
+    "occasional_accented_character_corruption",
+    "moshi_chunk_00188_contains_noisy_appendix_content"
+  ],
+  "bm25_baseline": {
+    "recall_at_5": 0.917,
+    "recall_at_10": 1.0,
+    "mrr": 0.884,
+    "median_latency_ms": 10.31,
+    "p95_latency_ms": 13.12
+  },
+  "sha256_checksums": {
+    "Attention is all you need.pdf": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+    "Dynamic Chunking.pdf": "04a2b32e6e82853cfc23c5db132750874a86cde99219ec6f664128f4aa83122f",
+    "Moshi.pdf": "a687144cc77bea86b0c60ae800ccb1d3e0816033fa5c7960388fe29a0dbfcfac",
+    "paragraphs.jsonl": "28b8d122ddb32cee0883cc400918825ded9a1d4b1d9b193cbdbc7c23c0fe12b8",
+    "chunks.jsonl": "21929aad7a7775b00686e4e73938d579c67648cb81fd9ce86048610bc62a7829",
+    "benchmark_questions.json": "d22b729e38143762cc32435b51aec7a3d22ddda60da7868767e4494127f846db"
+  }
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "q01",
+    "question": "What are the dimensions dk and dv used for each head in the Transformer multi-head attention mechanism?",
+    "target_paper": "attention",
+    "target_section": "3.2.2 Multi-Head Attention",
+    "expected_answer_keywords": ["dk = dv = 64", "h = 8", "dmodel = 512"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q02",
+    "question": "Why do the authors suspect that additive attention outperforms dot-product attention without scaling for large values of dk?",
+    "target_paper": "attention",
+    "target_section": "3.2.1 Scaled Dot-Product Attention",
+    "expected_answer_keywords": ["large magnitude", "extremely small gradients", "softmax"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q03",
+    "question": "What BLEU score did the Transformer establish on the WMT 2014 English-to-German and English-to-French benchmarks?",
+    "target_paper": "attention",
+    "target_section": "6.1 Machine Translation",
+    "expected_answer_keywords": ["28.4", "41.8"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q04",
+    "question": "How are positional encodings computed in the Transformer using sine and cosine functions?",
+    "target_paper": "attention",
+    "target_section": "3.5 Positional Encoding",
+    "expected_answer_keywords": ["sin", "cos", "10000", "2i"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q05",
+    "question": "How does Dynamic Chunking determine sequence segment boundaries compared to uniform fixed chunking?",
+    "target_paper": "dynamic_chunking",
+    "target_section": "Introduction / Method",
+    "expected_answer_keywords": ["dynamic", "boundary", "adaptive", "hierarchical"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q06",
+    "question": "What computational complexity bottleneck in long-context Transformers does Dynamic Chunking address?",
+    "target_paper": "dynamic_chunking",
+    "target_section": "Introduction",
+    "expected_answer_keywords": ["quadratic", "attention complexity", "memory"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q07",
+    "question": "What mechanism or boundary predictor is trained in Dynamic Chunking to segment tokens?",
+    "target_paper": "dynamic_chunking",
+    "target_section": "Method",
+    "expected_answer_keywords": ["boundary", "predictor", "segmentation", "chunk"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q08",
+    "question": "What throughput or sequence speedup does Dynamic Chunking demonstrate over standard dense transformers?",
+    "target_paper": "dynamic_chunking",
+    "target_section": "Results / Experiments",
+    "expected_answer_keywords": ["speedup", "throughput", "efficiency"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q09",
+    "question": "What is Mimi in the Moshi architecture and at what frame rate does its neural audio codec operate?",
+    "target_paper": "moshi",
+    "target_section": "Mimi",
+    "expected_answer_keywords": ["Mimi", "audio codec", "12.5 Hz", "residual vector quantization"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q10",
+    "question": "How does Moshi model conversational dialogue between the user and the agent simultaneously?",
+    "target_paper": "moshi",
+    "target_section": "Architecture",
+    "expected_answer_keywords": ["multi-stream", "dual-stream", "audio", "full-duplex"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q11",
+    "question": "What is the theoretical and observed latency of the Moshi speech-text model during dialogue?",
+    "target_paper": "moshi",
+    "target_section": "Introduction / Latency",
+    "expected_answer_keywords": ["latency", "160ms", "200ms"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q12",
+    "question": "How does Moshi combine text tokens with acoustic audio tokens in its language model?",
+    "target_paper": "moshi",
+    "target_section": "Model Architecture",
+    "expected_answer_keywords": ["text tokens", "acoustic tokens", "interleaved", "joint"],
+    "is_refusal": false,
+    "deceptive": false
+  },
+  {
+    "id": "q13",
+    "question": "What is the training batch size and learning rate used to train the LLaMA-3 foundation model?",
+    "target_paper": null,
+    "target_section": null,
+    "expected_answer_keywords": ["not mentioned", "refuse"],
+    "is_refusal": true,
+    "deceptive": false
+  },
+  {
+    "id": "q14",
+    "question": "What is the BLEU score of the Moshi dialogue model on the WMT 2014 English-to-German translation task?",
+    "target_paper": null,
+    "target_section": null,
+    "expected_answer_keywords": ["not evaluated", "refuse", "speech model"],
+    "is_refusal": true,
+    "deceptive": true
+  },
+  {
+    "id": "q15",
+    "question": "How does Dynamic Chunking optimize relational database SQL indexing and B-tree storage?",
+    "target_paper": null,
+    "target_section": null,
+    "expected_answer_keywords": ["not mentioned", "refuse", "not a database system"],
+    "is_refusal": true,
+    "deceptive": true
+  }
+]
+

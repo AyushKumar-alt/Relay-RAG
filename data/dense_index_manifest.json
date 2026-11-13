@@ -1,0 +1,8 @@
+{
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "embedding_dim": 384,
+  "chunks_indexed": 191,
+  "init_time_ms": 238027.26,
+  "index_build_time_ms": 33098.34,
+  "output_file": "dense_embeddings_bge.npy"
+}
